@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifes · Pati Vertical</title>
+<meta name="description" content="Entrades, quotes, packs i tarifes familiars del Pati Vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tri" viewBox="0 0 100 86">
+    <path d="M50 0 L100 86 L0 86 Z M33.2 29 L66.8 29 L72.6 39 L27.4 39 Z" fill-rule="evenodd"/>
+  </symbol>
+</svg>
+
+<!-- Nav -->
+<header class="nav">
+  <a href="index.html" class="logo nav__logo" aria-label="Pati Vertical, inici">pati<svg><use href="#tri"/></svg></a>
+  <nav class="nav__links" aria-label="Pàgines">
+    <a href="index.html#activitats">Què fem</a>
+    <a href="escola.html">Escola</a>
+    <a href="patis.html">Els patis</a>
+    <a href="tarifes.html" aria-current="page">Tarifes</a>
+    <a href="comunitat.html">Comunitat</a>
+  </nav>
+  <a href="https://spain.gymrealm.com/waiver/embedregistration?GymID=238&amp;NameSpace=PatiVertical" target="_blank" rel="noopener" class="btn btn--gold nav__cta">Vine a escalar</a>
+</header>
+<div class="progress"><i id="progress"></i></div>
+
+<main id="top" class="subpage">
+
+  <section class="phead">
+    <a class="phead__back" href="index.html">← Inici</a>
+    <h1>Tarifes<span class="gold">.</span></h1>
+    <p>Tria el pati i qui ve a escalar. Amb la quota multicentre, pots anar als dos.</p>
+  </section>
+
+  <!-- 8. Tarifes -->
+  <section class="prices" id="tarifes">
+    <div class="prices__head">
+      <div>
+        <span class="tag">Tarifes</span>
+        <h2>Quant costa<br>pujar?</h2>
+      </div>
+      <div class="prices__controls">
+        <div class="seg" role="group" aria-label="Centre">
+          <button class="is-on" data-gym="gran" aria-pressed="true">patiGran</button>
+          <button data-gym="xic" aria-pressed="false">patiXic</button>
+        </div>
+        <div class="seg" role="group" aria-label="Edat">
+          <button class="is-on" data-who="a" aria-pressed="true">Adults</button>
+          <button data-who="i" aria-pressed="false">Infants &lt;13</button>
+        </div>
+      </div>
+    </div>
+    <div class="prices__grid" id="priceGrid"></div>
+    <div class="family">
+      <h3>Packs familiars <small>/ mes</small></h3>
+      <div class="family__grid" id="familyGrid"></div>
+    </div>
+    <p class="prices__foot">Matrícula 35 € (es pot congelar per 10 € al mes). Targeta d'accés 3 €, retornable. En els packs familiars es paguen com a màxim dues matrícules.</p>
+  </section>
+
+  <!-- 11. CTA -->
+  <section class="cta" id="vine">
+    <h2 class="cta__big" id="ctaBig"><span>vine a</span><span>escalar.</span></h2>
+    <div class="cta__grid">
+      <p class="cta__lead">Primer cop? Omple el registre en línia abans de venir i, au, a escalar.</p>
+      <div class="cta__actions">
+        <a class="btn btn--ink" href="https://spain.gymrealm.com/waiver/embedregistration?GymID=238&amp;NameSpace=PatiVertical" target="_blank" rel="noopener">Fes el registre</a>
+        <a class="btn btn--line" href="https://www.instagram.com/elpativertical/" target="_blank" rel="noopener">@elpativertical</a>
+      </div>
+      <address>
+        <a href="tel:+34935480718">935 480 718</a><br>
+        <a href="mailto:info@elpativertical.cat">info@elpativertical.cat</a>
+      </address>
+    </div>
+    <footer class="foot">
+      <span>© 2026 El Pati Vertical S.L.</span>
+      <span>patiGran · Sant Fruitós de Bages &nbsp;/&nbsp; patiXic · Manresa</span>
+    </footer>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pati Vertical</title>
+<meta name="description" content="El Pati Vertical: rocòdroms de bloc i corda a Sant Fruitós de Bages (patiGran) i Manresa (patiXic). Climb, coffee, community.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tri" viewBox="0 0 100 86">
+    <path d="M50 0 L100 86 L0 86 Z M33.2 29 L66.8 29 L72.6 39 L27.4 39 Z" fill-rule="evenodd"/>
+  </symbol>
+</svg>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader__top">
+    <span class="logo logo--ink">pati<svg><use href="#tri"/></svg></span>
+    <span id="loaderLabel">Posant-nos magnesi</span>
+  </div>
+  <div class="loader__num"><span id="loaderNum">000</span><small>%</small></div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+</div>
+
+
+<!-- Nav -->
+<header class="nav">
+  <a href="#top" class="logo nav__logo" aria-label="Pati Vertical, inici">pati<svg><use href="#tri"/></svg></a>
+  <nav class="nav__links" aria-label="Pàgines">
+    <a href="#activitats">Què fem</a>
+    <a href="escola.html">Escola</a>
+    <a href="patis.html">Els patis</a>
+    <a href="tarifes.html">Tarifes</a>
+    <a href="comunitat.html">Comunitat</a>
+  </nav>
+  <a href="https://spain.gymrealm.com/waiver/embedregistration?GymID=238&amp;NameSpace=PatiVertical" target="_blank" rel="noopener" class="btn btn--gold nav__cta">Vine a escalar</a>
+</header>
+<div class="progress"><i id="progress"></i></div>
+
+<main id="top">
+
+  <!-- 1. HERO: vídeo dins de "pati" -->
+  <section class="hero" id="hero">
+    <div class="hero__pin">
+      <video class="hero__video" src="media/hero-loop.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="auto"></video>
+      <div class="hero__shade"></div>
+      <svg class="hero__mask" id="heroSvg" aria-hidden="true">
+        <defs>
+          <mask id="heroMask" maskUnits="userSpaceOnUse">
+            <rect id="maskBg" fill="#fff"/>
+            <g id="heroLetters"><text id="heroText" text-anchor="middle">pati</text></g>
+          </mask>
+        </defs>
+        <rect id="heroCover" fill="var(--ink)" mask="url(#heroMask)"/>
+      </svg>
+      <div class="hero__top">
+        <p>climb / coffee / community<br><span class="muted">Sant Fruitós de Bages · Manresa</span></p>
+        <p class="hero__scroll">Fes scroll <span>↓</span></p>
+      </div>
+      <h1 class="hero__claim" id="heroClaim">
+        <span class="line"><span>els rocos</span></span>
+        <span class="line"><span>de la catalunya</span></span>
+        <span class="line"><span class="gold">central.</span></span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- 2. Manifest -->
+  <section class="manifest">
+    <span class="tag">Des de 2016</span>
+    <p class="manifest__text" id="manifest">
+      Fa deu anys vam obrir un pati per escalar a Manresa. Avui en tenim <em>dos</em>, una sala de bloc nova de trinca i una colla que no para de créixer. Perquè sense tu, <em>només som parets.</em>
+    </p>
+    <div class="pillars">
+      <div class="pillar"><span>01</span><h3>climb</h3><p>Bloc i corda per a tots els nivells, des del primer dia fins al projecte que se't resisteix.</p></div>
+      <div class="pillar"><span>02</span><h3>coffee</h3><p>Cafeteria dins del pati. S'hi descansa entre intents i s'hi queda després.</p></div>
+      <div class="pillar"><span>03</span><h3>community</h3><p>Festes, disfresses, paella i DJ. La colla és el que fa que tornis.</p></div>
+    </div>
+  </section>
+
+  <!-- 3. Paret 3D -->
+  <section class="wall" id="paret">
+    <div class="wall__pin">
+      <div class="wall__bgword" aria-hidden="true">setting</div>
+      <canvas id="wallCanvas" aria-label="Paret de bloc en 3D que es munta presa a presa"></canvas>
+      <div class="wall__head">
+        <span class="tag">Bloc 001</span>
+        <h2>De paret buida<br>a bloc nou.</h2>
+        <p>Així neix un bloc nou al pati.</p>
+      </div>
+      <div class="callout" data-anchor="panel"><b>01</b> Panells<small>Placa, desplom i sostre</small></div>
+      <div class="callout" data-anchor="volume"><b>02</b> Volums<small>Formes que canvien la paret</small></div>
+      <div class="callout" data-anchor="holds"><b>03</b> Preses<small>Un color per a cada bloc</small></div>
+      <div class="callout" data-anchor="top"><b>04</b> Top<small>Mans juntes i a baix!</small></div>
+      <div class="wall__step" id="wallStep">Paret buida</div>
+    </div>
+  </section>
+
+  <!-- 4. Comptador d'anys -->
+  <section class="years" id="anys">
+    <div class="years__pin">
+      <video class="years__video" src="media/drill.mp4" poster="media/drill.jpg" muted loop playsinline data-lazyplay></video>
+      <p class="years__kicker">Pujant parets des de</p>
+      <div class="years__num" id="yearsNum">2016</div>
+      <p class="years__foot" id="yearsFoot">El primer pati, al Passatge de la Mercè de Manresa.</p>
+    </div>
+  </section>
+
+  <!-- 4b. El cim (render de Blender, fotograma a fotograma) -->
+  <section class="peak" id="cim">
+    <div class="peak__pin">
+      <canvas id="peakCanvas" aria-label="Vol en 3D sobre el relleu real de Montserrat fins a Sant Jeroni"></canvas>
+      <div class="peak__shade"></div>
+      <p class="peak__kicker">«Ets més de platja o de muntanya?»</p>
+      <div class="peak__lines">
+        <h2 class="peak__line" data-at="0.08">Ens agrada pujar.</h2>
+        <h2 class="peak__line" data-at="0.4">A dins del pati,</h2>
+        <h2 class="peak__line" data-at="0.7">i a fora, <span class="gold">al cim.</span></h2>
+      </div>
+      <p class="peak__foot">Montserrat de veritat: de la falda fins a Sant Jeroni, 1.236 m.<br><span>A mitja hora del pati.</span></p>
+      <span class="peak__credit">Relleu i ortofoto: © Institut Cartogràfic i Geològic de Catalunya (ICGC), CC BY 4.0</span>
+    </div>
+  </section>
+
+  <!-- 5. Activitats en horitzontal -->
+  <section class="acts" id="activitats">
+    <div class="acts__pin">
+      <div class="acts__intro">
+        <span class="tag">Què fem</span>
+        <h2>Tot el que<br>passa al<br><span class="gold">pati.</span></h2>
+      </div>
+      <div class="acts__track" id="track">
+        <article class="card">
+          <video src="media/bloc.mp4" poster="media/bloc.jpg" muted loop playsinline data-lazyplay aria-label="Escalador penjat d'un sostre a la sala de bloc"></video>
+          <div class="card__body"><span>01</span><h3>Bloc</h3><p>Sala de bloc nova, estrenada l'octubre de 2026: placa, desplom, sostre i blocs que canviem sovint.</p></div>
+        </article>
+        <article class="card">
+          <img src="media/foto18.jpg" alt="Paret alta de corda amb preses verdes i morades al patiGran" loading="lazy">
+          <div class="card__body"><span>02</span><h3>Corda</h3><p>Top rope, primer de corda i autobelay per escalar sense company.</p></div>
+        </article>
+        <article class="card">
+          <video src="media/setting.mp4" poster="media/setting.jpg" muted loop playsinline data-lazyplay></video>
+          <div class="card__body"><span>03</span><h3>Setting</h3><p>Equipem i muntem línies noves perquè cada visita sigui diferent.</p></div>
+        </article>
+        <article class="card">
+          <video class="crop-top" src="media/repte.mp4" poster="media/repte.jpg" muted playsinline data-lazyplay data-in="10.2" data-out="25.4" aria-label="Dos escaladors fent un repte en un bloc desplomat"></video>
+          <div class="card__body"><span>04</span><h3>Reptes</h3><p>Blocs per provar, perdre, tornar-hi i guanyar. Sempre hi ha algú que t'anima des del matalàs.</p></div>
+        </article>
+        <article class="card">
+          <video class="crop-bottom" src="media/gimnas.mp4" poster="media/gimnas.jpg" muted playsinline data-lazyplay data-in="1.6" data-out="3.9" aria-label="Zona d'entrenament amb gespa i màquines"></video>
+          <div class="card__body"><span>05</span><h3>Entrena</h3><p>Zona d'entrenament al patiGran per escalfar, guanyar força i treballar la mobilitat.</p></div>
+        </article>
+        <article class="card">
+          <img src="media/foto12.jpg" alt="Infants escalant una paret groga amb preses de colors" loading="lazy">
+          <div class="card__body"><span>06</span><h3>Infants i famílies</h3><p>Tarifes per a menors de 13 anys i packs familiars. Els menors sempre amb un adult.</p></div>
+        </article>
+        <article class="card">
+          <video class="crop-mid" src="media/placa.mp4" poster="media/placa.jpg" muted playsinline data-lazyplay data-in="0.2" data-out="5.4" aria-label="Dos escaladors en una placa amb preses grogues"></video>
+          <div class="card__body"><span>07</span><h3>Iniciació i grups</h3><p>Bateigs, classes particulars i activitats per a grups. Pregunta'ns a recepció.</p></div>
+        </article>
+        <article class="card">
+          <img src="media/foto07.jpg" alt="Gent conversant a la sala de bloc durant la inauguració" loading="lazy">
+          <div class="card__body"><span>08</span><h3>Cafè i colla</h3><p>Climb, coffee, community. La cafeteria tanca mitja hora més tard que la sala.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9a. Cap a les altres pàgines -->
+  <section class="explore" id="explora">
+    <div class="explore__head">
+      <h2>Tot el pati,<br><span class="gold">a un clic.</span></h2>
+      <p>L'escola, els horaris de cada pati, les tarifes i la colla, cadascú a la seva pàgina.</p>
+    </div>
+    <div class="explore__grid">
+      <a class="go" href="escola.html"><img src="media/foto12.jpg" alt="" loading="lazy"><div><h3>Escola</h3><p>Extraescolars, iniciació, grups i alt rendiment.</p></div><span class="go__arrow" aria-hidden="true">→</span></a>
+      <a class="go" href="patis.html"><img src="media/exterior.jpg" alt="" loading="lazy"><div><h3>Els patis</h3><p>patiGran i patiXic: horaris, adreces i com arribar.</p></div><span class="go__arrow" aria-hidden="true">→</span></a>
+      <a class="go" href="tarifes.html"><img src="media/foto18.jpg" alt="" loading="lazy"><div><h3>Tarifes</h3><p>Entrades, quotes, packs i plans per a famílies.</p></div><span class="go__arrow" aria-hidden="true">→</span></a>
+      <a class="go" href="comunitat.html"><img src="media/vida-i08.jpg" alt="" loading="lazy"><div><h3>Comunitat</h3><p>La gent, les festes i el dia a dia a Instagram.</p></div><span class="go__arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- 9. Xifres -->
+  <section class="stats">
+    <div class="stat"><div class="stat__n"><span data-count="2">0</span></div><p>patis per escalar</p></div>
+    <div class="stat"><div class="stat__n"><span data-count="10">0</span></div><p>anys fent colla</p></div>
+    <div class="stat"><div class="stat__n"><span data-count="1000">0</span><small>m²</small></div><p>de parets al patiGran</p></div>
+    <div class="stat"><div class="stat__n"><span data-count="7">0</span></div><p>dies a la setmana al patiGran</p></div>
+  </section>
+
+  <!-- 11. CTA -->
+  <section class="cta" id="vine">
+    <h2 class="cta__big" id="ctaBig"><span>vine a</span><span>escalar.</span></h2>
+    <div class="cta__grid">
+      <p class="cta__lead">Primer cop? Omple el registre en línia abans de venir i, au, a escalar.</p>
+      <div class="cta__actions">
+        <a class="btn btn--ink" href="https://spain.gymrealm.com/waiver/embedregistration?GymID=238&amp;NameSpace=PatiVertical" target="_blank" rel="noopener">Fes el registre</a>
+        <a class="btn btn--line" href="https://www.instagram.com/elpativertical/" target="_blank" rel="noopener">@elpativertical</a>
+      </div>
+      <address>
+        <a href="tel:+34935480718">935 480 718</a><br>
+        <a href="mailto:info@elpativertical.cat">info@elpativertical.cat</a>
+      </address>
+    </div>
+    <footer class="foot">
+      <span>© 2026 El Pati Vertical S.L.</span>
+      <span>patiGran · Sant Fruitós de Bages &nbsp;/&nbsp; patiXic · Manresa</span>
+    </footer>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="wall.js"></script>
+<script src="montserrat.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

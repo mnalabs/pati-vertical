@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Els patis · Pati Vertical</title>
+<meta name="description" content="Horaris i adreces del patiGran (Sant Fruitós de Bages) i del patiXic (Manresa).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tri" viewBox="0 0 100 86">
+    <path d="M50 0 L100 86 L0 86 Z M33.2 29 L66.8 29 L72.6 39 L27.4 39 Z" fill-rule="evenodd"/>
+  </symbol>
+</svg>
+
+<!-- Nav -->
+<header class="nav">
+  <a href="index.html" class="logo nav__logo" aria-label="Pati Vertical, inici">pati<svg><use href="#tri"/></svg></a>
+  <nav class="nav__links" aria-label="Pàgines">
+    <a href="index.html#activitats">Què fem</a>
+    <a href="escola.html">Escola</a>
+    <a href="patis.html" aria-current="page">Els patis</a>
+    <a href="tarifes.html">Tarifes</a>
+    <a href="comunitat.html">Comunitat</a>
+  </nav>
+  <a href="https://spain.gymrealm.com/waiver/embedregistration?GymID=238&amp;NameSpace=PatiVertical" target="_blank" rel="noopener" class="btn btn--gold nav__cta">Vine a escalar</a>
+</header>
+<div class="progress"><i id="progress"></i></div>
+
+<main id="top" class="subpage">
+
+  <section class="phead">
+    <a class="phead__back" href="index.html">← Inici</a>
+    <h1>Els patis<span class="gold">.</span></h1>
+    <p>Dos rocòdroms, una sola colla. Horaris, adreces i com arribar.</p>
+  </section>
+
+  <!-- 7. Els dos patis -->
+  <section class="gyms" id="patis">
+    <div class="gyms__head">
+      <span class="tag">Dos centres, una quota</span>
+      <h2>Tria el teu pati.</h2>
+      <p>La quota mensual multicentre et deixa escalar als dos.</p>
+    </div>
+    <div class="gyms__grid">
+      <article class="gym gym--gran">
+        <div class="gym__img"><video src="media/exterior.mp4" poster="media/exterior.jpg" muted playsinline data-lazyplay data-in="1.2" data-out="3.4" aria-label="Façana del patiGran amb el logotip pati"></video></div>
+        <div class="gym__body">
+          <h3>pati<b>Gran</b></h3>
+          <p class="gym__where">Camí del Grau, 15 · Sant Fruitós de Bages</p>
+          <dl class="hours">
+            <div><dt>Dilluns a divendres</dt><dd>8.00 – 22.30</dd></div>
+            <div><dt>Dissabtes i diumenges</dt><dd>9.00 – 21.00</dd></div>
+            <div><dt>Festius</dt><dd>10.00 – 14.00 · 16.00 – 21.00</dd></div>
+          </dl>
+          <p class="gym__note">Bloc, corda, zona d'entrenament, cafeteria i botiga. Obert cada dia.</p>
+          <a class="btn btn--ink" href="https://www.google.com/maps/place/El+Pati+Vertical/@41.729067,1.832702,15z" target="_blank" rel="noopener">Com arribar</a>
+        </div>
+      </article>
+      <article class="gym gym--xic">
+        <div class="gym__img"><img src="media/foto16.jpg" alt="Escalador saltant cap a una presa en una paret groga" loading="lazy"></div>
+        <div class="gym__body">
+          <h3>pati<b>Xic</b></h3>
+          <p class="gym__where">Passatge de la Mercè, 4 · Manresa</p>
+          <dl class="hours">
+            <div><dt>Dilluns a divendres</dt><dd>10.00 – 22.00</dd></div>
+            <div><dt>Dissabtes i diumenges</dt><dd>Tancat</dd></div>
+            <div><dt>Festius</dt><dd>Tancat</dd></div>
+          </dl>
+          <p class="gym__note">El pati de sempre, al centre de Manresa. El cap de setmana, socis al patiGran sense cost.</p>
+          <a class="btn btn--ink" href="https://maps.app.goo.gl/5jyhvtrnXbUYe3Hd6" target="_blank" rel="noopener">Com arribar</a>
+        </div>
+      </article>
+    </div>
+    <p class="gyms__foot">Les instal·lacions tanquen mitja hora abans que la cafeteria. 25 de desembre i 1 de gener, tancat. En dates especials, mira els horaris a Instagram.</p>
+  </section>
+
+  <!-- 6b. El projecte: abans / després -->
+  <section class="proj" id="projecte">
+    <div class="proj__text">
+      <span class="tag">El projecte 2026</span>
+      <h2>«La Sagrada Família, versió estesa.»</h2>
+      <p>Així vam anunciar les obres a l'estiu: un projecte ambiciós i llarg, una proposta arriscada. Creure en el creixement, reforçar els punts febles i posar la cirereta al pastís.</p>
+      <ol class="proj__steps">
+        <li><b>Juliol 2026</b> Plànols, panells i molta paciència.</li>
+        <li><b>30 d'octubre</b> Inauguració amb disfresses, DJ, premis i paella.</li>
+        <li><b>Ara</b> Sala de bloc nova oberta per a tothom.</li>
+      </ol>
+      <img class="proj__plan" src="media/obra5.jpg" alt="Plànol 3D de la distribució de la sala de bloc nova" loading="lazy">
+    </div>
+    <div class="ba" id="ba" aria-label="Comparació: la paret en obres i la paret acabada">
+      <img src="media/foto18.jpg" alt="La Dreamwall acabada, amb preses de colors" loading="lazy">
+      <div class="ba__before" id="baBefore"><img src="media/obra3.jpg" alt="La Dreamwall en obres, sense preses" loading="lazy"></div>
+      <span class="ba__tag ba__tag--l">Obres</span><span class="ba__tag ba__tag--r">Acabada</span>
+      <div class="ba__handle" id="baHandle"><i></i></div>
+      <input class="ba__range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Desplaça per comparar abans i després">
+    </div>
+  </section>
+
+  <!-- 11. CTA -->
+  <section class="cta" id="vine">
+    <h2 class="cta__big" id="ctaBig"><span>vine a</span><span>escalar.</span></h2>
+    <div class="cta__grid">
+      <p class="cta__lead">Primer cop? Omple el registre en línia abans de venir i, au, a escalar.</p>
+      <div class="cta__actions">
+        <a class="btn btn--ink" href="https://spain.gymrealm.com/waiver/embedregistration?GymID=238&amp;NameSpace=PatiVertical" target="_blank" rel="noopener">Fes el registre</a>
+        <a class="btn btn--line" href="https://www.instagram.com/elpativertical/" target="_blank" rel="noopener">@elpativertical</a>
+      </div>
+      <address>
+        <a href="tel:+34935480718">935 480 718</a><br>
+        <a href="mailto:info@elpativertical.cat">info@elpativertical.cat</a>
+      </address>
+    </div>
+    <footer class="foot">
+      <span>© 2026 El Pati Vertical S.L.</span>
+      <span>patiGran · Sant Fruitós de Bages &nbsp;/&nbsp; patiXic · Manresa</span>
+    </footer>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
